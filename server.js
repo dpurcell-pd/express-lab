@@ -2,6 +2,11 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
+app.get("/", (req, res) => {
+  res.send(`<h1>Home</h1>
+  <a href="/greeting">Go To Greeting</a>`)
+})
+
 app.get("/greeting", (req, res) => {
   res.send("<h1>Hello, stranger!</h1>");
 });
